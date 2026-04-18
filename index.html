@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <script src="src/index.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+
+    <title>SongBattle</title>
+</head>
+<body>
+<div class="twrapper">
+    <h1>SongBattle</h1>
+</div>
+<div class="landing">
+    <div class="landing__container">
+        <h2>The new and improved way to battle songs!</h2>
+        <p> Bevor we begin, please provide some information below. </p>
+        <form action="./subsites/song-selection.html" method="GET">
+            <p> How many players? </p>
+            <label>
+                <select name="selected_number" id="playernumber" class="small-dropdown" required>
+                    <option value="" disabled selected>Select...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </label>
+            <p> How many songs per player? </p>
+            <label>
+                <select name="selected_number" id="songsperplayer" class="small-dropdown" required>
+                    <option value="" disabled selected>Select...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </label>
+        <br>
+        <button class="buttons" onclick="start()">Start</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

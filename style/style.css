@@ -1,0 +1,124 @@
+body {
+    background-image: linear-gradient(to bottom, #1b0303);
+    background-attachment: fixed;
+    color: aliceblue;
+}
+
+.twrapper {
+    text-align: center;
+}
+h1 {
+    font-family: "Saira Stencil", sans-serif;
+    font-weight: bold;
+    font-size: 90px;
+}
+
+h2, p {
+    font-family: "Ubuntu", sans-serif;
+}
+
+.landing {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    opacity: 1;
+    animation-name: fadeIn;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 1.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+.landing__container {
+    background-color: #031b1b;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    color: #cabfbf;
+    width: auto;
+    height: auto;
+
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+
+.landing__container::after, .landing__container::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    padding: 3px;
+    background-image: conic-gradient(from var(--angle), transparent 70%, #450808);
+    animation: 2.5s spin linear infinite;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
+
+.landing__container::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+}
+
+.small-dropdown {
+    width: 100px;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+#songsperplayer {
+    margin-bottom: 1.5em;
+}
+
+.buttons {
+    padding: 1em 2em;
+    background-color: darkslategrey;
+    border: none;
+    border-radius: 1000px;
+    color: white;
+    position: relative;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+    display: inline-block;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+}
+
+.buttons:hover {
+    transform: translateY(-2px);
+    background-color: #01336a;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.buttons:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
