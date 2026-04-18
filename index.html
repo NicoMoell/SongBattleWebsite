@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Saira+Stencil:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 
-    <script src="src/index.js"></script>
+    <script src="src/index.js" defer></script>
     <link rel="stylesheet" href="style/style.css">
 
     <title>SongBattle</title>
@@ -27,9 +27,8 @@
         <form action="./subsites/song-selection.html" method="GET">
             <p> How many players? </p>
             <label>
-                <select name="selected_number" id="playernumber" class="small-dropdown" required>
+                <select name="selected_playernumber" id="playernumber" class="small-dropdown" required>
                     <option value="" disabled selected>Select...</option>
-                    <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
@@ -43,7 +42,7 @@
             </label>
             <p> How many songs per player? </p>
             <label>
-                <select name="selected_number" id="songsperplayer" class="small-dropdown" required>
+                <select name="selected_songnumber" id="songsperplayer" class="small-dropdown" required>
                     <option value="" disabled selected>Select...</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
